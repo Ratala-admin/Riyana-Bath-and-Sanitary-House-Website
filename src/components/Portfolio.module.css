@@ -1,0 +1,81 @@
+.portfolio {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  max-width: 700px;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category {
+  color: var(--accent-gold);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  color: var(--foreground);
+}
